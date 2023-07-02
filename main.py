@@ -15,6 +15,7 @@ bot = discord.Bot(intents=intents)
 
 chat_channel = int(os.getenv("CHAT_CHANNEL"))  # 将字符串转换为整数类型
 user_message_tracker = {}  # 用于跟踪用户的消息时间戳
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 @bot.event
 async def on_ready():
